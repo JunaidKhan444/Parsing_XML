@@ -13,12 +13,11 @@ def analyser(sub):
             count = count + 1
             d.append(str(x.text))
         if count == 1:
-            print(''.join(d))
             return ''.join(d)
         else:
-            removed_spaces = [i.strip() for i in d ]
-            del removed_spaces[0]
-            rt = '|'.join(removed_spaces)
+            #removed_spaces = [i.strip() for i in d ]
+            del d[0]
+            rt = '|'.join(d)
             return rt
     
 
